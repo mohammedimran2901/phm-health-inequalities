@@ -1,0 +1,10 @@
+# Exclude heavy dependencies from Vercel deployment
+requirements.txt
+src/
+data/
+notebooks/
+tests/
+docs/
+venv/
+*.pyc
+__pycache__/
