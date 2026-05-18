@@ -782,14 +782,7 @@ def main():
     elif st.session_state.current_view == 'export':
         render_export_view(imd_df)
     
-    # Premium Modal
-    if st.session_state.get('show_premium', False):
-        st.markdown("---")
-            render_premium_modal()
-            if st.button("✕ Close", key="close_premium"):
-                st.session_state.show_premium = False
-                st.rerun()
-    
+    # Premium Modal    if st.session_state.get('show_premium', False):        st.markdown("---")        render_premium_modal()        if st.button("✕ Close", key="close_premium"):            st.session_state.show_premium = False            st.rerun()        st.markdown("---")
     # Footer
     st.markdown("""
     <div style="text-align: center; padding: 40px 0; color: #5F6368; font-size: 0.875rem; border-top: 1px solid #E8EAED; margin-top: 40px;">
