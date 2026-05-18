@@ -784,9 +784,9 @@ def main():
     
     # Premium Modal
     if st.session_state.get('show_premium', False):
-        with st.modal("Upgrade to Pro"):
+        st.markdown("---")
             render_premium_modal()
-            if st.button("Close"):
+            if st.button("✕ Close", key="close_premium"):
                 st.session_state.show_premium = False
                 st.rerun()
     
